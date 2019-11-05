@@ -1,27 +1,4 @@
-# Python - Django Rest Framework boilerplate
-
-This is boilerplate for starting fresh new DRF projects. It's built using [cookiecutter-django-rest](https://github.com/agconti/cookiecutter-django-rest).
-
-## Highlights
-
-- Modern Python development with Python 3.6+
-- Bleeding edge Django 2.1+
-- Fully dockerized, local development via docker-compose.
-- MySQL
-- Full test coverage, continuous integration, and continuous deployment.
-
-### Features built-in
-
-- Token-based Auth system
-- Social (FB + G+) signup/sigin
-- API Throttling enabled
-- Password reset endpoints
-- User model with profile picture field using VesatileImage
-- Files manipulation (upload/delete)
-- Sentry setup
-- Swagger API docs out-of-the-box
-- CodeLinter (flake8) and CodeFormatter (yapf)
-- Tests (with mocking and factories) with code-coverage support
+# Django translate app
 
 ## API Docs
 
