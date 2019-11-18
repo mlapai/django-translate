@@ -29,6 +29,7 @@ class Common(Configuration):
         'rest_framework_swagger',     # swagger api
         'versatileimagefield',        # image lib
         'social_django',              # social login
+        'django_seed'                 # seeder
 
         # Your apps
         'src.users',
