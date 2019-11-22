@@ -17,3 +17,6 @@ class TranslateOption(models.Model):
     rush_price_percentage = models.DecimalField(max_digits=3, decimal_places=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ('from_language', 'to_language')
