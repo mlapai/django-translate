@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from rest_framework.validators import UniqueTogetherValidator
 
 from .models import Language, TranslateOption
 
@@ -15,6 +14,11 @@ class TranslateOptionSerializer(serializers.ModelSerializer):
     essential_price_per_word = serializers.DecimalField(max_digits=6, decimal_places=2, min_value=0.01)
     professional_price_per_word = serializers.DecimalField(max_digits=6, decimal_places=2, min_value=0.01)
     premium_price_per_word = serializers.DecimalField(max_digits=6, decimal_places=2, min_value=0.01)
+
+    def validate(self, data):
+        if data['from_language'] == data['to_language']:
+            raise serializers.ValidationError("Language cannot be translated to itself.")
+        return data
 
     class Meta:
         model = TranslateOption
