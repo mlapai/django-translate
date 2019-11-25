@@ -18,5 +18,8 @@ class TranslateOption(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return str(self.from_language) + ' - ' + str(self.to_language)
+
     class Meta:
         unique_together = ('from_language', 'to_language')

@@ -11,6 +11,7 @@ from .users.views import UserViewSet, UserCreateViewSet
 from .files.views import MyFileView
 from .social.views import exchange_token
 from .languages.views import LanguageView, TranslateOptionView
+from .quotes.views import SubjectView, QuoteView
 
 schema_view = get_swagger_view(title='Pastebin API')
 
@@ -19,6 +20,8 @@ router.register(r'users', UserViewSet)
 router.register(r'users', UserCreateViewSet)
 router.register(r'languages', LanguageView)
 router.register(r'translate-options', TranslateOptionView)
+router.register(r'subjects', SubjectView)
+router.register(r'quotes', QuoteView)
 
 urlpatterns = [
     # admin panel

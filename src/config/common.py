@@ -29,13 +29,15 @@ class Common(Configuration):
         'rest_framework_swagger',     # swagger api
         'versatileimagefield',        # image lib
         'social_django',              # social login
+        'django_extensions',
 
         # Your apps
         'src.users',
         'src.files',
         'src.social',
         'src.common',
-        'src.languages'
+        'src.languages',
+        'src.quotes'
 
     )
 
