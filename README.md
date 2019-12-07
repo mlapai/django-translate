@@ -1,4 +1,4 @@
-# Django translate app
+# Django boilerplate
 
 ## API Docs
 
