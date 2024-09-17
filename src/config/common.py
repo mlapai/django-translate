@@ -35,6 +35,7 @@ class Common(Configuration):
         'src.files',
         'src.social',
         'src.common',
+        'src.languages'
 
     )
 

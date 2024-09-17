@@ -10,12 +10,15 @@ from rest_framework_swagger.views import get_swagger_view
 from .users.views import UserViewSet, UserCreateViewSet
 from .files.views import MyFileView
 from .social.views import exchange_token
+from .languages.views import LanguageView, TranslateOptionView
 
 schema_view = get_swagger_view(title='Pastebin API')
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'users', UserCreateViewSet)
+router.register(r'languages', LanguageView)
+router.register(r'translate-options', TranslateOptionView)
 
 urlpatterns = [
     # admin panel
@@ -45,4 +48,5 @@ urlpatterns = [
     re_path(
         r'^$',
         RedirectView.as_view(url=reverse_lazy('api-root'), permanent=False)),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
